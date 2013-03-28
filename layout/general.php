@@ -168,7 +168,7 @@ echo $OUTPUT->doctype() ?>
 
 
 </div>
-<script src="<?php echo $CFG->wwwroot;?>/theme/bootstrap/js/jquery.js"></script>
-<script src="<?php echo $CFG->wwwroot;?>/theme/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo $CFG->wwwroot;?>/theme/bootstrap/javascript/jquery.js"></script>
+<script src="<?php echo $CFG->wwwroot;?>/theme/bootstrap/javascript/bootstrap.min.js"></script>
 </body>
 </html>
