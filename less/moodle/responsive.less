@@ -1,5 +1,7 @@
 /* responsive.less */
 
+// Should probably be moved to relevant .less files
+// after 4095 selector issue is solved
 
 @media (min-width: 980px) {
     .dir-rtl .navbar .nav.pull-right,
@@ -133,6 +135,30 @@
 }
 
 @media (max-width: 480px) {
+    // copied from tabs.less stacked-navs
+    .tabtree > ul {
+        border: none;
+    }
+    .tabtree > ul > li {
+        float: none;
+    }
+    .tabtree > ul > li > a {
+        border: 1px solid #ddd;
+        .border-radius(0);
+    }
+    .tabtree > ul > li.first > a {
+        .border-top-radius(4px);
+    }
+    .tabtree > ul > li.last > a,
+    .tabtree > ul > li.last > a:hover {
+        border: 1px solid #ddd;
+        .border-bottom-radius(4px);
+    }
+    .tabtree > ul > li > a:hover,
+    .tabtree > ul > li > a:focus {
+        border-color: #ddd;
+        z-index: 2;
+    }
     .file-picker .fp-repo-items,
     .file-picker .fp-repo-area {
         position: relative;
@@ -210,6 +236,12 @@
     .que .content {
         margin: 0;
     }
+    .path-mod-choice .horizontal  .choices .option {
+        display: block;
+    }
+    .path-mod-forum .forumsearch #search {
+        width: 120px;
+    }
 }
 
 // Stuart's 2,1,3 layout
@@ -236,16 +268,17 @@
     }
     .form-item .form-label label{
         display: inline-block;
+        margin-right: .5em;
     }
     .form-item .form-setting .form-checkbox {
         margin-top: 0;
     }
     .form-label span.form-shortname {
         display: inline-block;
-        margin-left: 2em;
     }
     .form-item .form-setting,
     .mform .fitem .felement,
+    .path-backup .mform .fitem .felement,
     .mform .fdescription.required,
     .form-item .form-description {
       margin-left: 0;
@@ -310,22 +343,9 @@
     .editing_move {
         display: none;
     }
-  // Padding to set content in a bit
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  // Negative indent the now static "fixed" navbar
-  .navbar-fixed-top,
-  .navbar-fixed-bottom,
-  .navbar-static-top {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  // Remove padding on container given explicit padding set on body
-  .container-fluid {
-    padding: 0;
-  }
+    .activityinstance > a {
+        display: block;
+    }
 
   // GRID & CONTAINERS
   // -----------------
@@ -360,5 +380,8 @@
   }
   .row-fluid [class*="offset"]:first-child {
     margin-left: 0;
+  }
+  div[role=main] {
+      margin-bottom: 2em;
   }
 }
