@@ -74,12 +74,12 @@ echo $OUTPUT->doctype() ?>
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
             <a class="brand" href="<?php echo $CFG->wwwroot;?>"><?php echo $SITE->shortname; ?></a>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <a id="global-nav-toggler" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <div class="nav-collapse collapse">
+            <div id="#global-nav1" class="nav-collapse collapse">
             <?php if ($hascustommenu) {
                 echo $custommenu;
             } ?>
@@ -166,6 +166,9 @@ echo $OUTPUT->doctype() ?>
 
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 
+
 </div>
+<script src="<?php echo $CFG->wwwroot;?>/theme/bootstrap/js/jquery.js"></script>
+<script src="<?php echo $CFG->wwwroot;?>/theme/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -14,6 +14,44 @@
     }
 }
 
+@media (max-width: @navbarCollapseWidth) {
+
+     // Bootstrap top navigation
+    .nav-collapse .navbar-form,
+    .nav-collapse .navbar-search {
+        margin-bottom: 0;
+        border-top: 2px solid @grayLighter;
+        border-bottom: 2px solid @grayLighter;
+    }
+
+    .navbar .nav-collapse {
+
+        .nav li > a {
+            color: @navbarLinkColor;
+            &:hover {
+                background-color: @dropdownLinkBackgroundHover;
+            }
+        }
+
+        .navbar-text {
+            margin-top: 0;
+        }
+    }
+
+    .navbar-inverse .nav-collapse {
+
+        .nav li > a {
+            color: @navbarInverseLinkColor;
+
+            &:hover {
+                background-color: #111;
+                background-image: none;
+            }
+        }
+
+    }
+}
+
 // login page
 @media (min-width: 1200px) {
     .loginbox.twocolumns .loginpanel {
@@ -114,7 +152,7 @@
     }
     .fp-upload-form td.mdl-right,
     .fp-upload-form td.mdl-left,
-    .fp-login-form .input, 
+    .fp-login-form .input,
     .file-picker .fp-login-form .fp-login-input label,
     .file-picker td.label {
         display: block;
@@ -242,8 +280,8 @@
             color: @grayDark;
         }
         .nav > li > a:hover,
-        .nav > li > a:focus, 
-        .dropdown-menu a:hover, 
+        .nav > li > a:focus,
+        .dropdown-menu a:hover,
         .dropdown-menu a:focus,
         .dropdown-submenu a:focus,
         .dropdown-submenu a:hover,
